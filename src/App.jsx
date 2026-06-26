@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import backgroundImg from "./assets/background.png";
 
 // Import Helper Components
 import Loader from "./components/Loader";
@@ -36,7 +37,7 @@ export default function App() {
       <FloatingHearts />
 
       {/* Subtle photo background watermark */}
-      <div className="photo-background" />
+      <div className="photo-background" style={{ backgroundImage: `url(${backgroundImg})` }} />
 
       {/* Intro Loading Overlay */}
       <Loader onFinish={() => setIsLoaded(true)} />
