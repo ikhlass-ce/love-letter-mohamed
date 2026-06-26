@@ -1,0 +1,278 @@
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: -1.2rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+.polaroidGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  padding: 10px;
+}
+
+.polaroidCard {
+  background: #f7f6f2; /* Warm Polaroid photo paper */
+  padding: 12px;
+  padding-bottom: 24px;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transform-origin: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #111;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(1.05) brightness(0.95);
+}
+
+.polaroidCard:hover .image {
+  transform: scale(1.06);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 77, 128, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.polaroidCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.cameraIcon {
+  color: #fff;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+.polaroidText {
+  padding-top: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.photoTitle {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: #1e1728; /* Handwritten ink color */
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #726c7e;
+  font-size: 0.75rem;
+}
+
+.dateIcon {
+  color: var(--primary);
+}
+
+.photoDate {
+  font-family: monospace;
+}
+
+/* Lightbox Overlay */
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(7, 5, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9995;
+  padding: 20px;
+}
+
+.lightboxContent {
+  background: rgba(18, 12, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition-fast);
+}
+
+.closeButton:hover {
+  background: var(--primary);
+  transform: scale(1.08);
+}
+
+.lightboxImageWrapper {
+  width: 55%;
+  aspect-ratio: 1 / 1;
+  background: #000;
+  display: flex;
+}
+
+.lightboxImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lightboxInfo {
+  width: 45%;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lightboxHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lightboxDate {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lightboxTitle {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.lightboxDescription {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 20px 0;
+  flex-grow: 1;
+}
+
+.lightboxFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 1024px) {
+  .polaroidGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightboxContent {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .lightboxImageWrapper {
+    width: 100%;
+  }
+  
+  .lightboxInfo {
+    width: 100%;
+    padding: 24px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .lightboxTitle {
+    font-size: 1.4rem;
+  }
+  
+  .lightboxDescription {
+    margin: 14px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .polaroidGrid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+}

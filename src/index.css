@@ -1,0 +1,109 @@
+:root {
+  /* Colors */
+  --bg-deep: #07050a;
+  --bg-darker: #0d0a15;
+  --bg-card: rgba(22, 16, 32, 0.6);
+  --bg-card-hover: rgba(35, 26, 51, 0.8);
+  --border-pink: rgba(255, 77, 128, 0.2);
+  --border-pink-glow: rgba(255, 77, 128, 0.5);
+  
+  --primary: #ff4d80;
+  --primary-hover: #ff2d66;
+  --primary-glow: rgba(255, 77, 128, 0.35);
+  --gold: #fcc200;
+  --gold-glow: rgba(252, 194, 0, 0.4);
+  --text-main: #f5edff;
+  --text-muted: #bda8d6;
+  
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-script: 'Great Vibes', 'Sacramento', cursive;
+  
+  /* Utilities */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+  --shadow-glow: 0 0 20px rgba(255, 77, 128, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 77, 128, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utility Animations & Typography */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Text glow effects */
+.glow-pink {
+  text-shadow: 0 0 10px rgba(255, 77, 128, 0.6), 0 0 20px rgba(255, 77, 128, 0.3);
+}
+
+.glow-gold {
+  text-shadow: 0 0 10px rgba(252, 194, 0, 0.6), 0 0 20px rgba(252, 194, 0, 0.3);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-pink);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Selection colors */
+::selection {
+  background-color: rgba(255, 77, 128, 0.3);
+  color: #fff;
+}
