@@ -64,6 +64,12 @@ Always and forever yours,`,
       title: "Our Little Moments",
       description: "Inside jokes, comfortable silences, and the way you hold my hand. The small things are my favorite.",
       icon: "Clock"
+    },
+    {
+      id: "thighs",
+      title: "Your Thighs",
+      description: "The absolute best place in the world to lay my head. Feeling your warmth makes me feel completely safe and cherished.",
+      icon: "Heart"
     }
   ],
 
@@ -148,5 +154,5 @@ Now, go look in the mirror, give yourself a big smile, and remember that you are
   },
 
   // Floating background music configuration
-  musicUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Fallback instrumental loop URL
+  musicUrl: "https://archive.org/download/kehlani-nights-like-this-lyrics-ft.-ty-dolla-mp-3-160-k/New%20West%20-%20Those%20Eyes%28MP3_128K%29%28MP3_128K%29.mp3" // "Those Eyes" by New West
 };
