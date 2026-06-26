@@ -66,9 +66,9 @@ Always and forever yours,`,
       icon: "Clock"
     },
     {
-      id: "thighs",
-      title: "Your Thighs",
-      description: "The absolute best place in the world to lay my head. Feeling your warmth makes me feel completely safe and cherished.",
+      id: "thing",
+      title: "Your Thing",
+      description: "The little habits, expressions, and quirks that are uniquely yours. Those special details that make me fall in love with you every single day.",
       icon: "Heart"
     }
   ],
