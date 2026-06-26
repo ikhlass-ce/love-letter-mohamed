@@ -35,6 +35,9 @@ export default function App() {
       {/* Floating starry night & heart background */}
       <FloatingHearts />
 
+      {/* Subtle photo background watermark */}
+      <div className="photo-background" />
+
       {/* Intro Loading Overlay */}
       <Loader onFinish={() => setIsLoaded(true)} />
 
