@@ -127,6 +127,29 @@
   }
 }
 
+.photoFrame {
+  background: #f7f6f2; /* Warm Polaroid photo paper */
+  padding: 10px;
+  padding-bottom: 24px;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  max-width: 170px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-origin: center;
+  transition: var(--transition-smooth);
+  z-index: 10;
+}
+
+.heroPhoto {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 2.3rem;
@@ -143,5 +166,15 @@
   .openBtn {
     padding: 14px 28px;
     font-size: 0.95rem;
+  }
+  
+  .photoFrame {
+    max-width: 140px;
+    padding-bottom: 18px;
+  }
+  
+  .heroPhoto {
+    width: 120px;
+    height: 120px;
   }
 }

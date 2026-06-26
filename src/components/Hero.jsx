@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Heart, ChevronDown } from "lucide-react";
 import styles from "./Hero.module.css";
 import { loveData } from "../config/loveData";
+import childPhoto from "../assets/child_photo.jpg";
 
 export default function Hero({ onOpenLetter }) {
   const [typedText, setTypedText] = useState("");
@@ -63,6 +64,17 @@ export default function Hero({ onOpenLetter }) {
           className={styles.topHeart}
         >
           <Heart fill="#ff4d80" size={48} className={styles.heartGlow} />
+        </motion.div>
+
+        {/* Childhood Photo Polaroid Frame */}
+        <motion.div
+          className={styles.photoFrame}
+          initial={{ scale: 0.8, opacity: 0, rotate: -3 }}
+          animate={{ scale: 1, opacity: 1, rotate: -3 }}
+          whileHover={{ scale: 1.05, rotate: 0 }}
+          transition={{ type: "spring", stiffness: 120, damping: 10, delay: 0.2 }}
+        >
+          <img src={childPhoto} alt="Baby Mohamed" className={styles.heroPhoto} />
         </motion.div>
 
         {/* Big Animated Title */}
