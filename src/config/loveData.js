@@ -68,7 +68,7 @@ Always and forever yours,`,
     {
       id: "thing",
       title: "Ur Thing",
-      description: "The little habits, expressions, and quirks that are uniquely yours. Those special details that make me fall in love with you every single day.",
+      description: "I want that delicious hard pretty thing that someday will feed me and heal me 😋",
       icon: "Heart"
     }
   ],
